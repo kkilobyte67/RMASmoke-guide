@@ -22,8 +22,7 @@ then log in and everything and stuff like that, and then download [RMASmoke](htt
 > [!NOTE]
 > then in crosh, paste this command to boot into RMASmoke
 
-
-```bash
+```
 #!/bin/bash
 CHROOT_PATH=/mnt/stateful_partition/rmasmoke_root
 tpm_manager_client destroy_space --index=0x80000A
@@ -41,7 +40,7 @@ umount $CHROOT_PATH/proc
 umount $CHROOT_PATH/var
 initctl start trunksd
 initctl start tpm_managerd
-initctl status tpm2-simulator #Check if the tpm2 simulator has crashed```
+initctl status tpm2-simulator #Check if the tpm2 simulator has crashed
 ```
 
 # And Hooray!!! Now WP (AKA: Write Protection) is Disabled!
